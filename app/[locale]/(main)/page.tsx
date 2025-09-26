@@ -1,19 +1,16 @@
 'use client';
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
+import Main from "../_components/Main";
+import About from "../_components/About";
 
 export default function Home() {
   const t = useTranslations("");
   return (
-    <div className="">
-      <motion.div 
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      className="bg-red-500">
-        {t('test')}
-      </motion.div>
-      Home Page
+    <div className="flex flex-col">
+      <Main />
+      <About />
     </div>
   );
 }

@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
         <body
-          className={`${kanit.variable} ${nunito.variable} antialiased bg-[#191D1D] text-white`}
+          className={`${kanit.variable} ${nunito.variable} antialiased text-white`}
         >
           <Wrapper>
             <Header />
