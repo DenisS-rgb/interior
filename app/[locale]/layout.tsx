@@ -32,9 +32,9 @@ export default function RootLayout({
           className={`${kanit.variable} ${nunito.variable} antialiased bg-[#191D1D] text-white`}
         >
           <Wrapper>
-            <Header />
+            {/* <Header /> */}
             {children}
-            <Footer />
+            {/* <Footer /> */}
           </Wrapper>
         </body>
     </html>
