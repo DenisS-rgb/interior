@@ -4,9 +4,6 @@ import Image from "next/image";
 import Main from "../_components/Main";
 import About from "../_components/About";
 
-import Hero from "./Hero";
-import Footer from "../_components/Footer";
-
 export default function Home() {
   const t = useTranslations("");
   return (
