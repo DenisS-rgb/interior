@@ -1,9 +1,10 @@
 'use client';
-import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Main from "../_components/Main";
 import About from "../_components/About";
+
+import Hero from "./Hero";
 
 export default function Home() {
   const t = useTranslations("");
@@ -11,6 +12,7 @@ export default function Home() {
     <div className="flex flex-col">
       <Main />
       <About />
+      <Hero />
     </div>
   );
 }
