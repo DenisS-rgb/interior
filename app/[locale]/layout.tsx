@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito, Kanit } from "next/font/google";
+import { Nunito, Kanit, Bricolage_Grotesque, Dancing_Script, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import Wrapper from "@/app/[locale]/_components/Wrapper";
 import Header from "./_components/Header";
@@ -8,12 +8,28 @@ import Footer from "./_components/Footer";
 const kanit = Kanit({
   variable: "--font-kanit",
   subsets: ["latin"],
-  weight: ["400"], 
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 const nunito = Nunito({
   variable: "--font-nunito",
   subsets: ["latin"],
+});
+
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
+  subsets: ["latin"]
+});
+
+const dancing = Dancing_Script({
+  variable: "--font-dancing",
+  subsets: ["latin"]
+})
+
+const nunitoSans = Nunito_Sans({
+  variable: "--font-nunito-sans",
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -29,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
         <body
-          className={`${kanit.variable} ${nunito.variable} antialiased text-white`}
+          className={`${kanit.variable} ${nunito.variable} ${bricolage.variable} ${dancing.variable} ${nunitoSans.variable} antialiased text-white`}
         >
           <Wrapper>
             {/* <Header /> */}

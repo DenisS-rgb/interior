@@ -10,4 +10,7 @@
   --color-foreground: var(--foreground);
   --font-nunito: var(--font-nunito);
   --font-kanit: var(--font-kanit);
+  --font-bricolage: var(--font-bricolage);
+  --font-dancing: var(--font-dancing);
+  --font-nunito-sans: var(--font-nunito-sans);
 }
