@@ -15,7 +15,7 @@ const LanguageSwitcher = ({ className }: { className?: string }) => {
         router.push(newPathname);
     };
 
-    const locales = ['ro', 'ru'];
+    const locales = ['ro', 'en'];
 
     const {
         ref,

@@ -48,9 +48,9 @@ export default function RootLayout({
           className={`${kanit.variable} ${nunito.variable} ${bricolage.variable} ${dancing.variable} ${nunitoSans.variable} antialiased text-white`}
         >
           <Wrapper>
-            {/* <Header /> */}
+            <Header />
             {children}
-            {/* <Footer /> */}
+            <Footer />
           </Wrapper>
         </body>
     </html>

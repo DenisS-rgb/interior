@@ -14,3 +14,21 @@
   --font-dancing: var(--font-dancing);
   --font-nunito-sans: var(--font-nunito-sans);
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: Custom scroll offset to account for fixed header */
+#about,
+#team,
+#services,
+#portfolio {
+  scroll-margin-top: 100px; /* Adjust based on your header height */
+}
+
+/* Alternative approach using CSS scroll-padding-top on html */
+/* This applies to all scroll targets */
+html {
+  scroll-padding-top: 100px; /* Adjust based on your header height */
+}
