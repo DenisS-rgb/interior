@@ -3,8 +3,6 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Main from "../_components/Main";
 import About from "../_components/About";
-
-import Hero from "./Hero";
 import Footer from "../_components/Footer";
 import Carousel from "../_components/Carousel";
 import CEO from "../_components/CEO";
