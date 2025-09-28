@@ -1,15 +1,25 @@
 'use client';
+
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { useRouter } from "@/i18n/navigation";
+import { useTranslations } from 'next-intl';
 
 export default function Projects() {
+    const t = useTranslations('projects');
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isAutoScrollPaused, setIsAutoScrollPaused] = useState(false);
     const intervalRef = useRef<number | null>(null);
 
     const router = useRouter()
-    const projects = "123456789".split("").map((num, i) => ({ id: i, title: `Project ${num}`, image: `/carouselImages/${num}.jpg`, alt: `Project ${num} Image` }));
+    
+    // Create projects array from translations
+    const projects = Array.from({ length: 9 }).map((_, i) => ({
+        id: i,
+        title: t(`items.${i}.title`),
+        image: `/carouselImages/${i + 1}.jpg`,
+        alt: t(`items.${i}.alt`)
+    }));
 
     // Auto-scroll functionality
     useEffect(() => {
@@ -54,22 +64,21 @@ export default function Projects() {
                 <div className="flex flex-col gap-4 sm:gap-6 mb-8 sm:mb-12">
                     <div className="mb-4 sm:mb-6 md:mb-0">
                         <p className="text-sm sm:text-base text-black mb-2 font-semibold font-bricolage px-4 sm:px-6 lg:px-8 py-2 sm:py-3 bg-white text-center w-fit rounded-xl">
-                            Our projects
+                            {t('badge')}
                         </p>
                         <h2 className="font-kanit text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-xs sm:max-w-lg lg:max-w-xl">
-                            More than beautiful – functional and personal
+                            {t('title')}
                         </h2>
                     </div>
 
                     {/* Navigation Controls */}
                     <div className="flex items-center gap-4">
-
                         {/* Navigation Arrows */}
                         <div className="flex gap-2 sm:gap-4 font-bricolage items-center justify-center">
                             <button
                                 onClick={prevSlide}
                                 className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-gray-300 cursor-pointer flex items-center justify-center hover:border-gray-400 hover:bg-white transition-all duration-200"
-                                aria-label={"previous project"}
+                                aria-label={t('navigation.previous')}
                             >
                                 <svg width="14" height="14" className="sm:w-4 sm:h-4" viewBox="0 0 16 16" fill="none">
                                     <path
@@ -92,7 +101,7 @@ export default function Projects() {
                             <button
                                 onClick={nextSlide}
                                 className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 cursor-pointer border-gray-300 flex items-center justify-center hover:border-gray-400 hover:bg-white transition-all duration-200"
-                                aria-label={"next project"}
+                                aria-label={t('navigation.next')}
                             >
                                 <svg width="14" height="14" className="sm:w-4 sm:h-4" viewBox="0 0 16 16" fill="none">
                                     <path
@@ -156,11 +165,12 @@ export default function Projects() {
                         <button
                             key={index}
                             onClick={() => goToSlide(index)}
-                            className={`w-2 h-2 rounded-full transition-all duration-200 ${index === currentSlide
+                            className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                                index === currentSlide
                                     ? 'bg-white w-4 sm:w-6'
                                     : 'bg-gray-300 hover:bg-gray-400 cursor-pointer'
-                                }`}
-                            aria-label="Go to slide"
+                            }`}
+                            aria-label={t('navigation.goToSlide', { slide: index + 1 })}
                         />
                     ))}
                 </div>

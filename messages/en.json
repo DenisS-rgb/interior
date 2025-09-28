@@ -1,3 +1,151 @@
 {
-    "test": "testen"
+"about": 
+{
+  "header": "ABOUT",
+  "title": "We are the most appreciated interior design studio in OSLO",
+  "description": {
+    "paragraph1": "We transform ordinary spaces into extraordinary places that inspire and bring comfort.",
+    "paragraph2Full": "With a team of passionate specialists and a creative approach, we have completed thousands of projects for clients from Romania and abroad.",
+    "paragraph2Short": "With passionate specialists and creative approach, we've completed thousands of projects for clients worldwide.",
+    "paragraph3": "Each project is a combination of functionality, aesthetics, and personality – so that the final result is truly yours."
+  },
+  "stats": {
+    "projects": {
+      "number": "2K+",
+      "label": "completed\nprojects"
+    },
+    "clients": {
+      "number": "300+",
+      "label": "happy\nclients"
+    }
+  },
+  "images": {
+    "project1": "Interior Design Project 1",
+    "project2": "Interior Design Project 2", 
+    "project3": "Interior Design Project 3",
+    "bottomBackground": "About Bottom Background"
+  },
+  "bottom": {
+    "title": "We combine creativity with functionality in every project",
+    "button": "COLLABORATE WITH US"
+  }
+},
+"projects": {
+  "badge": "Our projects",
+  "title": "More than beautiful – functional and personal",
+  "navigation": {
+    "previous": "Previous project",
+    "next": "Next project",
+    "goToSlide": "Go to slide {slide}"
+  },
+  "items": [
+    {
+      "title": "Project 1",
+      "alt": "Project 1 Image"
+    },
+    {
+      "title": "Project 2",
+      "alt": "Project 2 Image"
+    },
+    {
+      "title": "Project 3",
+      "alt": "Project 3 Image"
+    },
+    {
+      "title": "Project 4",
+      "alt": "Project 4 Image"
+    },
+    {
+      "title": "Project 5",
+      "alt": "Project 5 Image"
+    },
+    {
+      "title": "Project 6",
+      "alt": "Project 6 Image"
+    },
+    {
+      "title": "Project 7",
+      "alt": "Project 7 Image"
+    },
+    {
+      "title": "Project 8",
+      "alt": "Project 8 Image"
+    },
+    {
+      "title": "Project 9",
+      "alt": "Project 9 Image"
+    }
+  ]
+},
+"ceo": {
+  "header": {
+    "line1": "One name.",
+    "line2": "One unique vision."
+  },
+  "position": {
+    "line1": "CEO",
+    "line2": "Interior Designer"
+  },
+  "name": "Alf Richard Bjerkøen",
+  "imageAlt": "CEO Alf Richard Bjerkøen",
+  "bio": {
+    "paragraph1": "As founder of the Urban chain in the 90s, Alf Richard Bjerkøen began designing and building his own shops. Urban was later acquired by the Varner Group.",
+    "paragraph2": "Shopdesign was in the 2000s established to design and build stores for other players.",
+    "paragraph3": "Since 2016, Shopdesign has developed a new interior design system in collaboration with engineers and designers in Italy, so-called PluggInWall System. PluggInWall System is now fully developed and ready to be produced at our partner in Italy."
+  }
+},
+"footer": {
+  "nav": {
+    "about": "About",
+    "team": "Team", 
+    "services": "Services",
+    "portfolio": "Portfolio"
+  },
+  "phone": "+40 4012 013012310",
+  "logoAlt": "Company Logo",
+  "socialAlt": {
+    "facebook": "Facebook",
+    "instagram": "Instagram"
+  },
+  "tagline": "We transform spaces into places that inspire – since 2017.",
+  "copyright": "© 2025 All rights reserved. Created by Quant-Apps."
+},
+"header": {
+  "brand": "INTERIOR",
+  "nav": {
+    "about": "About",
+    "team": "Team",
+    "services": "Services", 
+    "portfolio": "Portfolio"
+  },
+  "phone": "+40 4012 013012310",
+  "phoneIconAlt": "Phone icon",
+  "ctaButton": "REQUEST QUOTE",
+  "menuToggle": "Toggle mobile menu"
+},
+"main": {
+  "heroImageAlt": "Interior design hero background",
+  "title": "We design your dream space",
+  "description": "We transform every room into a place where you feel inspired and comfortable.",
+  "swipeDown": "SWIPE DOWN"
+},
+"services": {
+  "list": [
+    {
+      "id": "01",
+      "title": "Interior Design",
+      "description": "We create unique interiors for shops, commercial spaces, apartments, camper vans, and cabins. Every project is designed with style, functionality, and atmosphere in mind — making your space work for your business or feel like home."
+    },
+    {
+      "id": "02",
+      "title": "Consultancy & Project Management",
+      "description": "Providing expert consultancy, project planning, and full execution support to ensure your vision comes to life seamlessly."
+    },
+    {
+      "id": "03",
+      "title": "Custom Furniture",
+      "description": "Furniture made to order with professional assembly included — designed to fit perfectly into your space."
+    }
+  ]
+}
 }

@@ -12,13 +12,11 @@ export default function Home() {
   const t = useTranslations("");
   return (
     <div className="flex flex-col">
-      {/* <Main /> */}
-      {/* <About /> */}
+      <Main />
+      <About />
       <CEO />
       <Services />
       <Carousel />
-      {/* <Hero /> */}
-      {/* <Footer /> */}
     </div>
   );
 }
