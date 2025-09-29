@@ -5,11 +5,12 @@ import LanguageSwitcher from "./LanguageSwitcher"
 import { useState } from "react"
 import { Link } from "@/i18n/navigation"
 import { useTranslations } from 'next-intl'
+import FormComponent from "./FormComponent"
 
 const Header = () => {
   const t = useTranslations('header');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
@@ -25,16 +26,16 @@ const Header = () => {
         <div className="flex flex-row gap-4 text-base font-nunito items-center">
           <ul className="flex flex-row gap-4">
             <li className="hover:text-gray-300 cursor-pointer transition-colors">
-                <Link href="#about">{t('nav.about')}</Link>
+              <Link href="#about">{t('nav.about')}</Link>
             </li>
             <li className="hover:text-gray-300 cursor-pointer transition-colors">
-                <Link href="#team">{t('nav.team')}</Link>
+              <Link href="#team">{t('nav.team')}</Link>
             </li>
             <li className="hover:text-gray-300 cursor-pointer transition-colors">
-                <Link href="#services">{t('nav.services')}</Link>
+              <Link href="#services">{t('nav.services')}</Link>
             </li>
             <li className="hover:text-gray-300 cursor-pointer transition-colors">
-                <Link href="#portfolio">{t('nav.portfolio')}</Link>
+              <Link href="#portfolio">{t('nav.portfolio')}</Link>
             </li>
           </ul>
           <div className="flex flex-row gap-2 items-center">
@@ -43,7 +44,7 @@ const Header = () => {
               <p className="hidden xl:block">{t('phone')}</p>
             </Link>
           </div>
-          <div className="font-kanit tracking-widest border-2 border-[#6D7D7D] rounded-4xl px-4 py-2 hover:bg-white hover:text-black cursor-pointer transition-colors">
+          <div onClick={() => setIsFormOpen(true)} className="font-kanit tracking-widest border-2 border-[#6D7D7D] rounded-4xl px-4 py-2 hover:bg-white hover:text-black cursor-pointer transition-colors">
             {t('ctaButton')}
           </div>
           <LanguageSwitcher />
@@ -59,7 +60,7 @@ const Header = () => {
         <div className="flex items-center gap-3">
           <LanguageSwitcher />
           {/* Hamburger Menu Button */}
-          <button 
+          <button
             onClick={toggleMobileMenu}
             className="flex flex-col justify-center items-center w-8 h-8 space-y-1.5"
             aria-label={t('menuToggle')}
@@ -93,10 +94,10 @@ const Header = () => {
 
             {/* Phone Number */}
             <div className="flex flex-row gap-3 items-center font-nunito">
-            <Link href="tel:+404012013012310" className="flex flex-row gap-2 items-center hover:text-gray-300 cursor-pointer transition-colors">
-              <Image src="/svg/phone.svg" alt={t('phoneIconAlt')} width={25} height={25} />
-              <p className="text-sm sm:text-base">{t('phone')}</p>
-            </Link>
+              <Link href="tel:+404012013012310" className="flex flex-row gap-2 items-center hover:text-gray-300 cursor-pointer transition-colors">
+                <Image src="/svg/phone.svg" alt={t('phoneIconAlt')} width={25} height={25} />
+                <p className="text-sm sm:text-base">{t('phone')}</p>
+              </Link>
             </div>
 
             {/* CTA Button */}
@@ -106,6 +107,7 @@ const Header = () => {
           </div>
         </div>
       )}
+            {isFormOpen && <FormComponent setIsFormOpen={setIsFormOpen} />}
     </div>
   )
 }

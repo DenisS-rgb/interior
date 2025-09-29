@@ -1,9 +1,13 @@
+'use client';
 import { cn } from "@/lib/utils"
 import Image from "next/image"
 import { useTranslations } from 'next-intl'
+import { useState } from "react";
+import FormComponent from "./FormComponent";
 
 const About = () => {
   const t = useTranslations('about');
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   return (
     <div id="about" className="bg-[#1A1D1D] px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-[300px] pt-8 sm:pt-12 md:pt-16 lg:pt-20 xl:pt-[100px]">
@@ -161,7 +165,7 @@ const About = () => {
                     {t('bottom.title')}
                   </h1>
                   <div className="inline-block">
-                    <div className="text-[10px] sm:text-base text-white border border-[#6D7D7D] rounded-full px-2 sm:px-6 py-1 sm:py-3 hover:bg-white hover:text-black transition-colors duration-300 cursor-pointer tracking-widest">
+                    <div onClick={() => setIsFormOpen(true)} className="text-[10px] sm:text-base text-white border border-[#6D7D7D] rounded-full px-2 sm:px-6 py-1 sm:py-3 hover:bg-white hover:text-black transition-colors duration-300 cursor-pointer tracking-widest">
                       {t('bottom.button')}
                     </div>
                   </div>
@@ -171,6 +175,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      {isFormOpen && <FormComponent setIsFormOpen={setIsFormOpen} />}
     </div>
   )
 }

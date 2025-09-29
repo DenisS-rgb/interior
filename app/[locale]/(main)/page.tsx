@@ -5,6 +5,7 @@ import CEO from "../_components/CEO";
 import Services from "../_components/Services";
 
 export default function Home() {
+
   return (
     <div className="flex flex-col">
       <Main />

@@ -9,7 +9,7 @@ interface Service {
 
 const Services: React.FC = () => {
     const t = useTranslations('services');
-    
+
     // Create services array from translations
     const services: Service[] = Array.from({ length: 3 }).map((_, i) => ({
         id: t(`list.${i}.id`),
@@ -24,9 +24,8 @@ const Services: React.FC = () => {
                     {services.map((service, index) => (
                         <div
                             key={service.id}
-                            className={`flex flex-col lg:flex-row lg:items-start justify-center gap-8 lg:gap-16 ${
-                                index === 0 ? 'pb-16 md:pb-20' : 'py-16 md:py-20'
-                            }`}
+                            className={`flex flex-col lg:flex-row lg:items-start justify-center gap-8 lg:gap-16 ${index === 0 ? 'pb-16 md:pb-20' : 'py-16 md:py-20'
+                                }`}
                         >
                             {/* Service Number and Title */}
                             <div className="flex-1 lg:max-w-md">
