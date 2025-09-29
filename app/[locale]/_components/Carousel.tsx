@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { useRouter } from "@/i18n/navigation";
 import { useTranslations } from 'next-intl';
 
 export default function Projects() {
@@ -11,7 +10,6 @@ export default function Projects() {
     const [isAutoScrollPaused, setIsAutoScrollPaused] = useState(false);
     const intervalRef = useRef<number | null>(null);
 
-    const router = useRouter()
     
     // Create projects array from translations
     const projects = Array.from({ length: 9 }).map((_, i) => ({
