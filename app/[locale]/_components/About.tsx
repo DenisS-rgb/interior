@@ -6,7 +6,7 @@ const About = () => {
   const t = useTranslations('about');
 
   return (
-    <div id="about" className="bg-[#1A1D1D] px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-[300px] py-8 sm:py-12 md:py-16 lg:py-20 xl:py-[100px]">
+    <div id="about" className="bg-[#1A1D1D] px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-[300px] pt-8 sm:pt-12 md:pt-16 lg:pt-20 xl:pt-[100px]">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="mb-6 sm:mb-8 lg:mb-12 flex flex-col gap-2 sm:gap-3 lg:gap-6">
@@ -37,30 +37,30 @@ const About = () => {
           {/* Images - Responsive Layout */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <div className="sm:col-span-2">
-              <Image 
-                src="/image/about1.png" 
+              <Image
+                src="/image/about1.png"
                 alt={t('images.project1')}
-                width={400} 
-                height={300} 
+                width={400}
+                height={300}
                 className="w-full h-48 sm:h-64 md:h-80 object-cover rounded-lg object-center"
                 priority
               />
             </div>
             <div className="order-2 sm:order-none">
-              <Image 
-                src="/image/about2.png" 
+              <Image
+                src="/image/about2.png"
                 alt={t('images.project2')}
-                width={400} 
-                height={300} 
+                width={400}
+                height={300}
                 className="w-full h-48 sm:h-56 md:h-72 object-cover rounded-lg object-center"
               />
             </div>
             <div className="order-1 sm:order-none">
-              <Image 
-                src="/image/about3.png" 
+              <Image
+                src="/image/about3.png"
                 alt={t('images.project3')}
-                width={400} 
-                height={200} 
+                width={400}
+                height={200}
                 className="w-full h-40 sm:h-56 md:h-72 object-cover rounded-lg object-center"
               />
             </div>
@@ -89,11 +89,11 @@ const About = () => {
         <div className="hidden xl:grid xl:grid-cols-6 gap-4 2xl:gap-6">
           {/* First Large Image */}
           <div className="col-span-2 h-full">
-            <Image 
-              src="/image/about1.png" 
+            <Image
+              src="/image/about1.png"
               alt={t('images.project1')}
-              width={400} 
-              height={400} 
+              width={400}
+              height={400}
               className="w-full h-full object-cover rounded-lg"
               priority
             />
@@ -101,11 +101,11 @@ const About = () => {
 
           {/* Second Image */}
           <div className="col-span-2 h-full">
-            <Image 
-              src="/image/about2.png" 
+            <Image
+              src="/image/about2.png"
               alt={t('images.project2')}
-              width={400} 
-              height={400} 
+              width={400}
+              height={400}
               className="w-full h-full object-cover rounded-lg"
             />
           </div>
@@ -114,11 +114,11 @@ const About = () => {
           <div className="col-span-2 h-full flex flex-col gap-4 2xl:gap-6">
             {/* Third Image - Top Half */}
             <div className="flex-1">
-              <Image 
-                src="/image/about3.png" 
+              <Image
+                src="/image/about3.png"
                 alt={t('images.project3')}
-                width={300} 
-                height={180} 
+                width={300}
+                height={180}
                 className="w-full h-full object-cover rounded-lg"
               />
             </div>
@@ -144,15 +144,15 @@ const About = () => {
         </div>
 
         {/* Bottom Section with Background Image */}
-        <div className="relative mt-8 sm:mt-12 lg:mt-16 xl:mt-24 mb-8 sm:mb-12 lg:mb-20 xl:mb-[150px]">
-          <div className="relative xl:absolute xl:bottom-[-400px]">
+        <div className="relative translate-y-1/2">
+          <div className="">
             <div className="relative">
-              <Image 
-                src="/image/about4.png" 
+              <Image
+                src="/image/about4.png"
                 alt={t('images.bottomBackground')}
-                width={1920} 
-                height={200} 
-                className="w-full h-auto rounded-lg object-cover" 
+                width={1920}
+                height={200}
+                className="w-full h-auto rounded-lg object-cover"
               />
               {/* Content Overlay */}
               <div className={cn("absolute inset-0 flex items-center justify-center px-4 sm:px-8 lg:pl-[450px] md:pl-[300px] lg:justify-center", "max-xl:pl-32 max-xl:justify-center max-sm:pl-0")}>
