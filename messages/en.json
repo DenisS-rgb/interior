@@ -158,12 +158,10 @@
     "phonePlaceholder": "Enter your phone number",
     "servicesLabel": "Select the services you need:",
     "services": {
-      "render3d": "3D Rendering",
-      "designMobilier": "Custom Furniture Design",
-      "pachetPlus": "Plus Package",
-      "designExterior": "Exterior Design (facades, terraces, courtyards)",
-      "implementare": "Implementation",
-      "consultanta": "Interior Design Consultation"
+      "designInterior": "Design interior for shops, commercial, apartments, camping cars, cabins",
+      "consultancy": "Consultancy, proiect, execution",
+      "furnitureOrder": "Furniture on order, montage included",
+      "pluginWall": "PluggInWall System"
     },
     "messageLabel": "Your Message",
     "messagePlaceholder": "Describe your project, objectives, and priorities...",

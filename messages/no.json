@@ -1,150 +1,173 @@
 {
-    "about": {
-  "header": "OM OSS",
-  "title": "Vi er det mest verdsatte interiørdesignstudioet i OSLO",
-  "description": {
-    "paragraph1": "Vi transformerer vanlige rom til ekstraordinære steder som inspirerer og gir komfort.",
-    "paragraph2Full": "Med et team av lidenskapelige spesialister og en kreativ tilnærming har vi fullført tusenvis av prosjekter for kunder fra Norge og utlandet.",
-    "paragraph2Short": "Med lidenskapelige spesialister og kreativ tilnærming har vi fullført tusenvis av prosjekter for kunder verden over.",
-    "paragraph3": "Hvert prosjekt er en kombinasjon av funksjonalitet, estetikk og personlighet – slik at sluttresultatet virkelig er ditt."
-  },
-  "stats": {
-    "projects": {
-      "number": "2K+",
-      "label": "fullførte\nprosjekter"
+  "about": {
+    "header": "OM OSS",
+    "title": "Vi er det mest verdsatte interiørdesignstudioet i OSLO",
+    "description": {
+      "paragraph1": "Vi transformerer vanlige rom til ekstraordinære steder som inspirerer og gir komfort.",
+      "paragraph2Full": "Med et team av lidenskapelige spesialister og en kreativ tilnærming har vi fullført tusenvis av prosjekter for kunder fra Norge og utlandet.",
+      "paragraph2Short": "Med lidenskapelige spesialister og kreativ tilnærming har vi fullført tusenvis av prosjekter for kunder verden over.",
+      "paragraph3": "Hvert prosjekt er en kombinasjon av funksjonalitet, estetikk og personlighet – slik at sluttresultatet virkelig er ditt."
     },
-    "clients": {
-      "number": "300+",
-      "label": "fornøyde\nkunder"
+    "stats": {
+      "projects": {
+        "number": "2K+",
+        "label": "fullførte\nprosjekter"
+      },
+      "clients": {
+        "number": "300+",
+        "label": "fornøyde\nkunder"
+      }
+    },
+    "images": {
+      "project1": "Interiørdesign Prosjekt 1",
+      "project2": "Interiørdesign Prosjekt 2",
+      "project3": "Interiørdesign Prosjekt 3",
+      "bottomBackground": "Om Oss Bakgrunnsbilde"
+    },
+    "bottom": {
+      "title": "Vi kombinerer kreativitet med funksjonalitet i hvert prosjekt",
+      "button": "SAMARBEID MED OSS"
     }
   },
-  "images": {
-    "project1": "Interiørdesign Prosjekt 1",
-    "project2": "Interiørdesign Prosjekt 2",
-    "project3": "Interiørdesign Prosjekt 3",
-    "bottomBackground": "Om Oss Bakgrunnsbilde"
+  "projects": {
+    "badge": "Våre prosjekter",
+    "title": "Mer enn vakkert – funksjonelt og personlig",
+    "navigation": {
+      "previous": "Forrige prosjekt",
+      "next": "Neste prosjekt",
+      "goToSlide": "Gå til lysbilde {slide}"
+    },
+    "items": [
+      {
+        "title": "Prosjekt 1",
+        "alt": "Prosjekt 1 Bilde"
+      },
+      {
+        "title": "Prosjekt 2",
+        "alt": "Prosjekt 2 Bilde"
+      },
+      {
+        "title": "Prosjekt 3",
+        "alt": "Prosjekt 3 Bilde"
+      },
+      {
+        "title": "Prosjekt 4",
+        "alt": "Prosjekt 4 Bilde"
+      },
+      {
+        "title": "Prosjekt 5",
+        "alt": "Prosjekt 5 Bilde"
+      },
+      {
+        "title": "Prosjekt 6",
+        "alt": "Prosjekt 6 Bilde"
+      },
+      {
+        "title": "Prosjekt 7",
+        "alt": "Prosjekt 7 Bilde"
+      },
+      {
+        "title": "Prosjekt 8",
+        "alt": "Prosjekt 8 Bilde"
+      },
+      {
+        "title": "Prosjekt 9",
+        "alt": "Prosjekt 9 Bilde"
+      }
+    ]
   },
-  "bottom": {
-    "title": "Vi kombinerer kreativitet med funksjonalitet i hvert prosjekt",
-    "button": "SAMARBEID MED OSS"
-  }
-},
-"projects": {
-  "badge": "Våre prosjekter",
-  "title": "Mer enn vakkert – funksjonelt og personlig",
-  "navigation": {
-    "previous": "Forrige prosjekt",
-    "next": "Neste prosjekt",
-    "goToSlide": "Gå til lysbilde {slide}"
-  },
-  "items": [
-    {
-      "title": "Prosjekt 1",
-      "alt": "Prosjekt 1 Bilde"
+  "ceo": {
+    "header": {
+      "line1": "Ett navn.",
+      "line2": "En unik visjon."
     },
-    {
-      "title": "Prosjekt 2",
-      "alt": "Prosjekt 2 Bilde"
+    "position": {
+      "line1": "CEO",
+      "line2": "Interiørdesigner"
     },
-    {
-      "title": "Prosjekt 3",
-      "alt": "Prosjekt 3 Bilde"
-    },
-    {
-      "title": "Prosjekt 4",
-      "alt": "Prosjekt 4 Bilde"
-    },
-    {
-      "title": "Prosjekt 5",
-      "alt": "Prosjekt 5 Bilde"
-    },
-    {
-      "title": "Prosjekt 6",
-      "alt": "Prosjekt 6 Bilde"
-    },
-    {
-      "title": "Prosjekt 7",
-      "alt": "Prosjekt 7 Bilde"
-    },
-    {
-      "title": "Prosjekt 8",
-      "alt": "Prosjekt 8 Bilde"
-    },
-    {
-      "title": "Prosjekt 9",
-      "alt": "Prosjekt 9 Bilde"
+    "name": "Alf Richard Bjerkøen",
+    "imageAlt": "CEO Alf Richard Bjerkøen",
+    "bio": {
+      "paragraph1": "Som grunnlegger av Urban-kjeden på 90-tallet begynte Alf Richard Bjerkøen å designe og bygge sine egne butikker. Urban ble senere kjøpt opp av Varner-gruppen.",
+      "paragraph2": "Shopdesign ble på 2000-tallet etablert for å designe og bygge butikker for andre aktører.",
+      "paragraph3": "Siden 2016 har Shopdesign utviklet et nytt interiørdesignsystem i samarbeid med ingeniører og designere i Italia, såkalt PluggInWall System. PluggInWall System er nå ferdig utviklet og klar til å produseres hos vår partner i Italia."
     }
-  ]
-},
-"ceo": {
+  },
+  "footer": {
+    "nav": {
+      "about": "Om oss",
+      "team": "Team",
+      "services": "Tjenester",
+      "portfolio": "Portefølje"
+    },
+    "phone": "+40 4012 013012310",
+    "logoAlt": "Bedriftslogo",
+    "socialAlt": {
+      "facebook": "Facebook",
+      "instagram": "Instagram"
+    },
+    "tagline": "Vi transformerer rom til steder som inspirerer – siden 2017.",
+    "copyright": "© 2025 Alle rettigheter forbeholdt. Laget av Quant-Apps."
+  },
   "header": {
-    "line1": "Ett navn.",
-    "line2": "En unik visjon."
+    "brand": "INTERIOR",
+    "nav": {
+      "about": "Om oss",
+      "team": "Team",
+      "services": "Tjenester",
+      "portfolio": "Portefølje"
+    },
+    "phone": "+40 4012 013012310",
+    "phoneIconAlt": "Telefon ikon",
+    "ctaButton": "BE OM TILBUD",
+    "menuToggle": "Veksle mobil meny"
   },
-  "position": {
-    "line1": "CEO",
-    "line2": "Interiørdesigner"
+  "main": {
+    "heroImageAlt": "Interiørdesign hero bakgrunn",
+    "title": "Vi designer ditt drømmerom",
+    "description": "Vi transformerer hvert rom til et sted hvor du føler deg inspirert og komfortabel.",
+    "swipeDown": "SVEIP NED"
   },
-  "name": "Alf Richard Bjerkøen",
-  "imageAlt": "CEO Alf Richard Bjerkøen",
-  "bio": {
-    "paragraph1": "Som grunnlegger av Urban-kjeden på 90-tallet begynte Alf Richard Bjerkøen å designe og bygge sine egne butikker. Urban ble senere kjøpt opp av Varner-gruppen.",
-    "paragraph2": "Shopdesign ble på 2000-tallet etablert for å designe og bygge butikker for andre aktører.",
-    "paragraph3": "Siden 2016 har Shopdesign utviklet et nytt interiørdesignsystem i samarbeid med ingeniører og designere i Italia, såkalt PluggInWall System. PluggInWall System er nå ferdig utviklet og klar til å produseres hos vår partner i Italia."
+  "services": {
+    "list": [
+      {
+        "id": "01",
+        "title": "Interiørdesign",
+        "description": "Vi skaper unike interiør for butikker, kommersielle rom, leiligheter, bobiler og hytter. Hvert prosjekt er designet med stil, funksjonalitet og atmosfære i tankene — slik at rommet ditt fungerer for din virksomhet eller føles som hjemme."
+      },
+      {
+        "id": "02",
+        "title": "Rådgivning og Prosjektledelse",
+        "description": "Vi tilbyr ekspertrådgivning, prosjektplanlegging og full støtte under gjennomføring for å sikre at din visjon blir realisert sømløst."
+      },
+      {
+        "id": "03",
+        "title": "Skreddersydde Møbler",
+        "description": "Møbler laget på bestilling med profesjonell montering inkludert — designet for å passe perfekt inn i ditt rom."
+      }
+    ]
+  },
+  "contactForm": {
+    "title": "Kreativt prosjekt?",
+    "subtitle": "La oss ha en produktiv samtale.",
+    "fullNameLabel": "Fullt navn",
+    "fullNamePlaceholder": "Skriv inn navnet ditt",
+    "emailLabel": "E-post",
+    "emailPlaceholder": "Skriv inn e-postadressen din",
+    "phoneLabel": "Telefon",
+    "phonePlaceholder": "Skriv inn telefonnummeret ditt",
+    "servicesLabel": "Velg tjenestene du trenger:",
+    "services": {
+      "designInterior": "Interiørdesign for butikker, kommersielle lokaler, leiligheter, campingbiler, hytter",
+      "consultancy": "Konsulenttjenester, prosjekt, utførelse",
+      "furnitureOrder": "Møbler på bestilling, montering inkludert",
+      "pluginWall": "PluggInWall-system"
+    },
+    "messageLabel": "Din melding",
+    "messagePlaceholder": "Beskriv prosjektet ditt, mål og prioriteringer...",
+    "submitButton": "Send melding",
+    "submitButtonSending": "Sender...",
+    "successMessage": "Meldingen ble sendt!",
+    "errorMessage": "En feil oppstod. Vennligst prøv igjen."
   }
-},
-"footer": {
-  "nav": {
-    "about": "Om oss",
-    "team": "Team",
-    "services": "Tjenester", 
-    "portfolio": "Portefølje"
-  },
-  "phone": "+40 4012 013012310",
-  "logoAlt": "Bedriftslogo",
-  "socialAlt": {
-    "facebook": "Facebook",
-    "instagram": "Instagram"
-  },
-  "tagline": "Vi transformerer rom til steder som inspirerer – siden 2017.",
-  "copyright": "© 2025 Alle rettigheter forbeholdt. Laget av Quant-Apps."
-},
-"header": {
-  "brand": "INTERIOR",
-  "nav": {
-    "about": "Om oss",
-    "team": "Team",
-    "services": "Tjenester",
-    "portfolio": "Portefølje"
-  },
-  "phone": "+40 4012 013012310",
-  "phoneIconAlt": "Telefon ikon",
-  "ctaButton": "BE OM TILBUD",
-  "menuToggle": "Veksle mobil meny"
-},
-"main": {
-  "heroImageAlt": "Interiørdesign hero bakgrunn",
-  "title": "Vi designer ditt drømmerom",
-  "description": "Vi transformerer hvert rom til et sted hvor du føler deg inspirert og komfortabel.",
-  "swipeDown": "SVEIP NED"
-},
-"services": {
-  "list": [
-    {
-      "id": "01",
-      "title": "Interiørdesign",
-      "description": "Vi skaper unike interiør for butikker, kommersielle rom, leiligheter, bobiler og hytter. Hvert prosjekt er designet med stil, funksjonalitet og atmosfære i tankene — slik at rommet ditt fungerer for din virksomhet eller føles som hjemme."
-    },
-    {
-      "id": "02",
-      "title": "Rådgivning og Prosjektledelse",
-      "description": "Vi tilbyr ekspertrådgivning, prosjektplanlegging og full støtte under gjennomføring for å sikre at din visjon blir realisert sømløst."
-    },
-    {
-      "id": "03",
-      "title": "Skreddersydde Møbler",
-      "description": "Møbler laget på bestilling med profesjonell montering inkludert — designet for å passe perfekt inn i ditt rom."
-    }
-  ]
-}
 }

@@ -39,13 +39,12 @@ export default function FormElement({ showPhone = false }: { showPhone?: boolean
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
   const serviceOptions = [
-    { id: 'render3d', label: t('services.render3d') },
-    { id: 'designMobilier', label: t('services.designMobilier') },
-    { id: 'pachetPlus', label: t('services.pachetPlus') },
-    { id: 'designExterior', label: t('services.designExterior') },
-    { id: 'implementare', label: t('services.implementare') },
-    { id: 'consultanta', label: t('services.consultanta') }
+    { id: 'designInterior', label: t('services.designInterior') },
+    { id: 'consultancy', label: t('services.consultancy') },
+    { id: 'furnitureOrder', label: t('services.furnitureOrder') },
+    { id: 'pluginWall', label: t('services.pluginWall') }
   ];
+
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -59,7 +58,7 @@ export default function FormElement({ showPhone = false }: { showPhone?: boolean
   });
 
   const containerVariants: Variants = {
-    hidden: { 
+    hidden: {
       opacity: 0,
       y: -50
     },
@@ -76,7 +75,7 @@ export default function FormElement({ showPhone = false }: { showPhone?: boolean
   };
 
   const itemVariants: Variants = {
-    hidden: { 
+    hidden: {
       opacity: 0,
       y: -20
     },
