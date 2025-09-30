@@ -20,7 +20,7 @@ const Main = () => {
         <div className="block lg:hidden">
             <div className="flex flex-col items-center justify-center h-screen px-6 text-center">
                 <div className="mb-8">
-                    <h2 className="font-kanit text-2xl sm:text-3xl md:text-4xl text-white mb-4">
+                    <h2 className="font-kanit text-2xl sm:text-3xl md:text-4xl text-white mb-4 pt-32">
                         {t('title')}
                     </h2>
                     <p className="font-nunito text-sm sm:text-base text-white/70 max-w-md">
