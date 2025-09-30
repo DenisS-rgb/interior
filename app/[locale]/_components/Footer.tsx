@@ -3,12 +3,12 @@
 import { Link } from '@/i18n/navigation'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 
 const Footer = () => {
   const t = useTranslations('footer');
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -19,7 +19,7 @@ const Footer = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
@@ -31,7 +31,7 @@ const Footer = () => {
     }
   };
 
-  const navItemVariants = {
+  const navItemVariants: Variants = {
     hidden: { opacity: 0, x: -20 },
     visible: {
       opacity: 1,
@@ -43,7 +43,7 @@ const Footer = () => {
     }
   };
 
-  const socialVariants = {
+  const socialVariants: Variants = {
     hidden: { scale: 0, rotate: -180 },
     visible: {
       scale: 1,
@@ -112,26 +112,30 @@ const Footer = () => {
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Image 
-                      src="/svg/facebook.svg" 
-                      alt={t('socialAlt.facebook')}
-                      width={40} 
-                      height={40} 
-                      className="sm:w-[50px] sm:h-[50px] hover:opacity-80 cursor-pointer transition-opacity" 
-                  />
+                    <Link href="https://www.facebook.com/share/16gY4dso1g/?mibextid=wwXIfr" target='_blank' rel='noopener noreferrer'>
+                        <Image 
+                            src="/svg/facebook.svg" 
+                            alt={t('socialAlt.facebook')}
+                            width={40} 
+                            height={40} 
+                            className="sm:w-[50px] sm:h-[50px] hover:opacity-80 cursor-pointer transition-opacity" 
+                        />
+                    </Link>
                 </motion.div>
                 <motion.div
                   variants={socialVariants}
                   whileHover={{ scale: 1.1, rotate: -5 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Image 
-                      src="/svg/instagram.svg" 
-                      alt={t('socialAlt.instagram')}
-                      width={40} 
-                      height={40} 
-                      className="sm:w-[50px] sm:h-[50px] hover:opacity-80 cursor-pointer transition-opacity" 
-                  />
+                    <Link href="https://www.instagram.com/alfrichardbjerkoen/#" target='_blank' rel='noopener noreferrer'>
+                        <Image 
+                            src="/svg/instagram.svg" 
+                            alt={t('socialAlt.instagram')}
+                            width={40} 
+                            height={40} 
+                            className="sm:w-[50px] sm:h-[50px] hover:opacity-80 cursor-pointer transition-opacity" 
+                        />
+                    </Link>
                 </motion.div>
             </motion.div>
             <motion.p 

@@ -47,7 +47,7 @@ const Header = () => {
         {/* Desktop Header */}
         <div className="hidden lg:flex flex-row justify-evenly items-center p-4">
           <div className="font-kanit font-bold text-base tracking-widest">
-            {t('brand')}
+            <Link href="#main">{t('brand')}</Link>
           </div>
 
           <div className="flex flex-row gap-4 text-base font-nunito items-center">
