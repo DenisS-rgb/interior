@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useTranslations } from 'next-intl';
+import { motion, Variants } from 'framer-motion';
 
 // EmailJS Configuration Constants - Fill these with your actual values
 const EMAILJS_SERVICE_ID = 'service_ygz6zab';
@@ -56,6 +57,38 @@ export default function FormElement({ showPhone = false }: { showPhone?: boolean
       phone: '', // Optional field for phone number
     },
   });
+
+  const containerVariants: Variants = {
+    hidden: { 
+      opacity: 0,
+      y: -50
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants: Variants = {
+    hidden: { 
+      opacity: 0,
+      y: -20
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.4,
+        ease: "easeOut"
+      }
+    }
+  };
 
   const onSubmit = async (values: FormData) => {
     // Validate environment variables
@@ -121,171 +154,185 @@ export default function FormElement({ showPhone = false }: { showPhone?: boolean
   };
 
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 font-inter">
-        {/* Name and Email Row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <FormField
-            control={form.control}
-            name="fullName"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-lg text-gray-700 font-semibold">
-                  {t('fullNameLabel')}
-                </FormLabel>
-                <FormControl>
-                  <Input
-                    type="text"
-                    placeholder={t('fullNamePlaceholder')}
-                    {...field}
-                    disabled={isSubmitting}
-                    className="border-0 border-b text-black border-gray-300 rounded-none bg-transparent px-0 pb-2 focus-visible:ring-0 focus-visible:border-gray-600 placeholder:text-gray-400"
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+      className=''
+    >
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 font-inter">
+          {/* Name and Email Row */}
+          <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <FormField
+              control={form.control}
+              name="fullName"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-lg text-gray-700 font-semibold">
+                    {t('fullNameLabel')}
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      type="text"
+                      placeholder={t('fullNamePlaceholder')}
+                      {...field}
+                      disabled={isSubmitting}
+                      className="border-0 border-b text-black border-gray-300 rounded-none bg-transparent px-0 pb-2 focus-visible:ring-0 focus-visible:border-gray-600 placeholder:text-gray-400"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-lg text-gray-700 font-semibold">
-                  {t('emailLabel')}
-                </FormLabel>
-                <FormControl>
-                  <Input
-                    type="email"
-                    placeholder={t('emailPlaceholder')}
-                    {...field}
-                    disabled={isSubmitting}
-                    className="border-0 border-b text-black border-gray-300 rounded-none bg-transparent px-0 pb-2 focus-visible:ring-0 focus-visible:border-gray-600 placeholder:text-gray-400"
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </div>
-        {showPhone && <div>
-          <FormField
-            control={form.control}
-            name="phone"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-lg text-gray-700 font-semibold">
-                  {t('phoneLabel')}
-                </FormLabel>
-                <FormControl>
-                  <Input
-                    type="text"
-                    placeholder={t('phonePlaceholder')}
-                    {...field}
-                    disabled={isSubmitting}
-                    className="border-0 border-b text-black border-gray-300 rounded-none bg-transparent px-0 pb-2 focus-visible:ring-0 focus-visible:border-gray-600 placeholder:text-gray-400"
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </div>}
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-lg text-gray-700 font-semibold">
+                    {t('emailLabel')}
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      type="email"
+                      placeholder={t('emailPlaceholder')}
+                      {...field}
+                      disabled={isSubmitting}
+                      className="border-0 border-b text-black border-gray-300 rounded-none bg-transparent px-0 pb-2 focus-visible:ring-0 focus-visible:border-gray-600 placeholder:text-gray-400"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </motion.div>
 
-        {/* Services Section */}
-        <FormField
-          control={form.control}
-          name="services"
-          render={() => (
-            <FormItem>
-              <FormLabel className="text-lg text-gray-700 font-semibold">
-                {t('servicesLabel')}
-              </FormLabel>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                {serviceOptions.map((service) => (
-                  <FormField
-                    key={service.id}
-                    control={form.control}
-                    name="services"
-                    render={({ field }) => {
-                      return (
-                        <FormItem
-                          key={service.id}
-                          className="flex flex-row items-center space-x-3 space-y-0"
-                        >
-                          <FormControl>
-                            <Checkbox
-                              checked={field.value?.includes(service.id)}
-                              onCheckedChange={(checked) => {
-                                if (checked) {
-                                  field.onChange([...field.value, service.id]);
-                                } else {
-                                  field.onChange(field.value?.filter((value) => value !== service.id));
-                                }
-                              }}
-                              disabled={isSubmitting}
-                              className="data-[state=checked]:bg-gray-800 data-[state=checked]:border-gray-800"
-                            />
-                          </FormControl>
-                          <FormLabel className="text-gray-700 text-left font-normal cursor-pointer">
-                            {service.label}
-                          </FormLabel>
-                        </FormItem>
-                      );
-                    }}
-                  />
-                ))}
-              </div>
-              <FormMessage />
-            </FormItem>
+          {showPhone && (
+            <motion.div variants={itemVariants}>
+              <FormField
+                control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-lg text-gray-700 font-semibold">
+                      {t('phoneLabel')}
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        type="text"
+                        placeholder={t('phonePlaceholder')}
+                        {...field}
+                        disabled={isSubmitting}
+                        className="border-0 border-b text-black border-gray-300 rounded-none bg-transparent px-0 pb-2 focus-visible:ring-0 focus-visible:border-gray-600 placeholder:text-gray-400"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </motion.div>
           )}
-        />
 
-        {/* Message Section */}
-        <FormField
-          control={form.control}
-          name="message"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel className="text-lg text-gray-700 font-semibold">
-                {t('messageLabel')}
-              </FormLabel>
-              <FormControl>
-                <Textarea
-                  placeholder={t('messagePlaceholder')}
-                  {...field}
-                  disabled={isSubmitting}
-                  rows={4}
-                  className="border-0 border-b text-black border-gray-300 rounded-none bg-transparent px-0 pb-2 focus-visible:ring-0 focus-visible:border-gray-600 placeholder:text-gray-400 resize-none"
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+          {/* Services Section */}
+          <motion.div variants={itemVariants}>
+            <FormField
+              control={form.control}
+              name="services"
+              render={() => (
+                <FormItem>
+                  <FormLabel className="text-lg text-gray-700 font-semibold">
+                    {t('servicesLabel')}
+                  </FormLabel>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                    {serviceOptions.map((service) => (
+                      <FormField
+                        key={service.id}
+                        control={form.control}
+                        name="services"
+                        render={({ field }) => {
+                          return (
+                            <FormItem
+                              key={service.id}
+                              className="flex flex-row items-center space-x-3 space-y-0"
+                            >
+                              <FormControl>
+                                <Checkbox
+                                  checked={field.value?.includes(service.id)}
+                                  onCheckedChange={(checked) => {
+                                    if (checked) {
+                                      field.onChange([...field.value, service.id]);
+                                    } else {
+                                      field.onChange(field.value?.filter((value) => value !== service.id));
+                                    }
+                                  }}
+                                  disabled={isSubmitting}
+                                  className="data-[state=checked]:bg-gray-800 data-[state=checked]:border-gray-800"
+                                />
+                              </FormControl>
+                              <FormLabel className="text-gray-700 text-left font-normal cursor-pointer">
+                                {service.label}
+                              </FormLabel>
+                            </FormItem>
+                          );
+                        }}
+                      />
+                    ))}
+                  </div>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </motion.div>
 
-        {/* Submit Button */}
-        <div className="pt-6">
-          <Button
-            type="submit"
-            disabled={isSubmitting}
-            className="cursor-pointer bg-gray-800 text-white px-8 py-3 hover:bg-gray-900 disabled:opacity-50"
-          >
-            {isSubmitting ? (
-              <span className="flex items-center justify-center">
-                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-                {t('submitButtonSending')}
-              </span>
-            ) : (
-              t('submitButton')
-            )}
-          </Button>
-        </div>
-      </form>
-    </Form>
+          {/* Message Section */}
+          <motion.div variants={itemVariants}>
+            <FormField
+              control={form.control}
+              name="message"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-lg text-gray-700 font-semibold">
+                    {t('messageLabel')}
+                  </FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder={t('messagePlaceholder')}
+                      {...field}
+                      disabled={isSubmitting}
+                      rows={4}
+                      className="border-0 border-b text-black border-gray-300 rounded-none bg-transparent px-0 pb-2 focus-visible:ring-0 focus-visible:border-gray-600 placeholder:text-gray-400 resize-none"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </motion.div>
+
+          {/* Submit Button */}
+          <motion.div variants={itemVariants} className="pt-6">
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              className="cursor-pointer bg-gray-800 text-white px-8 py-3 hover:bg-gray-900 disabled:opacity-50"
+            >
+              {isSubmitting ? (
+                <span className="flex items-center justify-center">
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  {t('submitButtonSending')}
+                </span>
+              ) : (
+                t('submitButton')
+              )}
+            </Button>
+          </motion.div>
+        </form>
+      </Form>
+    </motion.div>
   );
 }

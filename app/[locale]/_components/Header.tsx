@@ -6,7 +6,8 @@ import { useState } from "react"
 import { Link } from "@/i18n/navigation"
 import { useTranslations } from 'next-intl'
 import FormComponent from "./FormComponent"
-import { motion, useScroll, useMotionValueEvent } from "framer-motion"
+import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion"
+
 
 const Header = () => {
   const t = useTranslations('header');
@@ -143,7 +144,9 @@ const Header = () => {
           </div>
         )}
       </div>
-      {isFormOpen && <FormComponent setIsFormOpen={setIsFormOpen} />}
+
+        {isFormOpen && <FormComponent setIsFormOpen={setIsFormOpen} />}
+
     </motion.div>
   )
 }
