@@ -139,7 +139,7 @@ export default function FormElement({ showPhone = false }: { showPhone?: boolean
                     placeholder={t('fullNamePlaceholder')}
                     {...field}
                     disabled={isSubmitting}
-                    className="border-0 border-b border-gray-300 rounded-none bg-transparent px-0 pb-2 focus-visible:ring-0 focus-visible:border-gray-600 placeholder:text-gray-400"
+                    className="border-0 border-b text-black border-gray-300 rounded-none bg-transparent px-0 pb-2 focus-visible:ring-0 focus-visible:border-gray-600 placeholder:text-gray-400"
                   />
                 </FormControl>
                 <FormMessage />
@@ -161,7 +161,7 @@ export default function FormElement({ showPhone = false }: { showPhone?: boolean
                     placeholder={t('emailPlaceholder')}
                     {...field}
                     disabled={isSubmitting}
-                    className="border-0 border-b border-gray-300 rounded-none bg-transparent px-0 pb-2 focus-visible:ring-0 focus-visible:border-gray-600 placeholder:text-gray-400"
+                    className="border-0 border-b text-black border-gray-300 rounded-none bg-transparent px-0 pb-2 focus-visible:ring-0 focus-visible:border-gray-600 placeholder:text-gray-400"
                   />
                 </FormControl>
                 <FormMessage />
@@ -184,7 +184,7 @@ export default function FormElement({ showPhone = false }: { showPhone?: boolean
                     placeholder={t('phonePlaceholder')}
                     {...field}
                     disabled={isSubmitting}
-                    className="border-0 border-b border-gray-300 rounded-none bg-transparent px-0 pb-2 focus-visible:ring-0 focus-visible:border-gray-600 placeholder:text-gray-400"
+                    className="border-0 border-b text-black border-gray-300 rounded-none bg-transparent px-0 pb-2 focus-visible:ring-0 focus-visible:border-gray-600 placeholder:text-gray-400"
                   />
                 </FormControl>
                 <FormMessage />
@@ -257,7 +257,7 @@ export default function FormElement({ showPhone = false }: { showPhone?: boolean
                   {...field}
                   disabled={isSubmitting}
                   rows={4}
-                  className="border-0 border-b border-gray-300 rounded-none bg-transparent px-0 pb-2 focus-visible:ring-0 focus-visible:border-gray-600 placeholder:text-gray-400 resize-none"
+                  className="border-0 border-b text-black border-gray-300 rounded-none bg-transparent px-0 pb-2 focus-visible:ring-0 focus-visible:border-gray-600 placeholder:text-gray-400 resize-none"
                 />
               </FormControl>
               <FormMessage />

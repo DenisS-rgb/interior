@@ -71,7 +71,9 @@ const Header = () => {
                 <p className="hidden xl:block">{t('phone')}</p>
               </Link>
             </div>
-            <div onClick={() => setIsFormOpen(true)} className="font-kanit tracking-widest border-2 border-[#6D7D7D] rounded-4xl px-4 py-2 hover:bg-white hover:text-black cursor-pointer transition-colors">
+
+            {/* CTA Button */}
+            <div onClick={() => setIsFormOpen(true)} className="font-kanit tracking-widest border-2 border-[#6D7D7D] rounded-4xl px-6 py-3 hover:bg-white hover:text-black cursor-pointer transition-colors text-center text-sm">
               {t('ctaButton')}
             </div>
             <LanguageSwitcher />
