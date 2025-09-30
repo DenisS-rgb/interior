@@ -57,7 +57,7 @@ export default function Projects() {
 
     return (
         <section className="w-full py-8 sm:py-12 lg:py-16 px-4 md:px-8 lg:px-16 bg-[#191D1D]">
-            <div className="max-w-7xl mx-auto">
+            <div id="portfolio" className="max-w-7xl mx-auto">
                 {/* Header Section */}
                 <div className="flex flex-col gap-4 sm:gap-6 mb-8 sm:mb-12">
                     <div className="mb-4 sm:mb-6 md:mb-0">

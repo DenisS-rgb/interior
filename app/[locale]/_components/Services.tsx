@@ -18,7 +18,7 @@ const Services: React.FC = () => {
     }));
 
     return (
-        <section className="bg-[#191D1D] text-white py-16 px-4 sm:px-6 lg:px-8">
+        <section id='services' className="bg-[#191D1D] text-white py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <div className="divide-y divide-gray-800">
                     {services.map((service, index) => (

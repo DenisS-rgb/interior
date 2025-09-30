@@ -5,7 +5,7 @@ export default function CEO() {
     const t = useTranslations('ceo');
 
     return (
-        <div className="pt-26 md:pt-32 lg:pt-48 bg-[#131616] px-4 md:px-8 lg:px-16">
+        <div id="team" className="pt-26 md:pt-32 lg:pt-48 bg-[#131616] px-4 md:px-8 lg:px-16">
             {/* Header */}
             <h2 className="text-center font-bricolage font-semibold text-3xl md:text-5xl lg:text-6xl leading-tight">
                 {t('header.line1')}<br />
