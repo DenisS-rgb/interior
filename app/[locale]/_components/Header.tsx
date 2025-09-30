@@ -101,7 +101,7 @@ const Header = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="font-kanit tracking-widest border-2 border-[#6D7D7D] rounded-4xl px-6 py-3 hover:bg-white hover:text-black cursor-pointer transition-colors text-center text-sm">
+            <div onClick={() => setIsFormOpen(true)} className="font-kanit tracking-widest border-2 border-[#6D7D7D] rounded-4xl px-6 py-3 hover:bg-white hover:text-black cursor-pointer transition-colors text-center text-sm">
               {t('ctaButton')}
             </div>
           </div>

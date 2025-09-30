@@ -12,10 +12,10 @@ export default function FormComponent({ setIsFormOpen }: { setIsFormOpen: (isOpe
   
   return (
     <div 
-      className="fixed top-0 bottom-0 left-0 right-0 no-doc-scroll backdrop-blur-lg flex justify-center items-center z-50 overflow-y-auto"
+      className="fixed top-0 bottom-0 left-0 right-0 no-doc-scroll backdrop-blur-lg flex justify-center items-start z-50 overflow-y-auto py-8"
       onClick={handleBackdropClick}
     >
-      <div className="max-w-2xl mx-auto p-8 bg-white pt-[100px] relative">
+      <div className="max-w-2xl w-full mx-auto p-8 bg-white relative">
         <button
           onClick={() => setIsFormOpen(false)}
           className="absolute cursor-pointer top-4 right-4 text-gray-500 hover:text-gray-800 transition-colors"
@@ -36,7 +36,7 @@ export default function FormComponent({ setIsFormOpen }: { setIsFormOpen: (isOpe
           </svg>
         </button>
         
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 pt-12">
           <h1 className="text-5xl font-bold text-gray-800 mb-2 font-bricolage">
             {t('title')}
           </h1>
