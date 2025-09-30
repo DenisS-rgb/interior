@@ -8,6 +8,7 @@ import { useTranslations } from 'next-intl'
 import FormComponent from "./FormComponent"
 import { motion, useScroll, useMotionValueEvent } from "framer-motion"
 
+
 const Header = () => {
   const t = useTranslations('header');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -143,7 +144,9 @@ const Header = () => {
           </div>
         )}
       </div>
-      {isFormOpen && <FormComponent setIsFormOpen={setIsFormOpen} />}
+
+        {isFormOpen && <FormComponent setIsFormOpen={setIsFormOpen} />}
+
     </motion.div>
   )
 }
