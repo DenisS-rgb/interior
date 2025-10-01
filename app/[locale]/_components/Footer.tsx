@@ -85,7 +85,7 @@ const Footer = () => {
                     ))}
                 </motion.ul>
                 <motion.div variants={itemVariants}>
-                  <Link href="tel:+404012013012310" className="flex items-center gap-2 hover:text-gray-300 transition-colors">
+                  <Link href="tel:+47 911 97 560" className="flex items-center gap-2 hover:text-gray-300 transition-colors">
                       <p className="text-sm sm:text-base order-1 sm:order-2 font-medium">{t('phone')}</p>
                   </Link>
                 </motion.div>
