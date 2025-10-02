@@ -145,3 +145,16 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+.hero-cue {
+  display: inline-block;
+  animation: heroPulse 1.8s ease-in-out infinite;
+}
+@keyframes heroPulse {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(6px); opacity: .85; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-cue { animation: none !important; }
+}
