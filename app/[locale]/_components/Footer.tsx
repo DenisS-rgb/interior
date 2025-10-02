@@ -95,7 +95,7 @@ const Footer = () => {
               variants={itemVariants}
               whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
             >
-                <Image src="/svg/logo.svg" alt={t('logoAlt')} width={80} height={40} className="sm:w-[100px] sm:h-[50px]" />
+                <Image src="/svg/logo.svg" alt={t('logoAlt')} width={200} height={200} className="sm:w-[200px] sm:h-[100px]" />
             </motion.div>
         </motion.div>
 

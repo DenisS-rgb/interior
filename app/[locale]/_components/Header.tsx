@@ -48,7 +48,7 @@ const Header = () => {
         {/* Desktop Header */}
         <div className="hidden lg:flex flex-row justify-evenly items-center p-4">
           <div className="font-kanit font-bold text-base tracking-widest">
-            <Link href="#main">{t('brand')}</Link>
+            <Link href="#main"><Image src="/svg/logo.svg" alt={"logo"} width={150} height={150} /></Link>
           </div>
 
           <div className="flex flex-row gap-4 text-base font-nunito items-center">
@@ -84,7 +84,7 @@ const Header = () => {
         {/* Mobile Header */}
         <div className="flex lg:hidden justify-between items-center p-4">
           <div className="font-kanit font-bold text-base tracking-widest">
-            {t('brand')}
+            <Link href="#main"><Image src="/svg/logo.svg" alt={"logo"} width={150} height={150} /></Link>
           </div>
 
           <div className="flex items-center gap-3">

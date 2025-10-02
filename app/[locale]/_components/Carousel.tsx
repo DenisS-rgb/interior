@@ -12,7 +12,7 @@ export default function Projects() {
 
     
     // Create projects array from translations
-    const projects = Array.from({ length: 9 }).map((_, i) => ({
+    const projects = Array.from({ length: 18 }).map((_, i) => ({
         id: i,
         title: t(`items.${i}.title`),
         image: `/carouselImages/${i + 1}.jpg`,
