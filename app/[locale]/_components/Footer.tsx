@@ -44,49 +44,6 @@ const Footer = () => {
             transition: { type: "spring", stiffness: 260, damping: 20 }
         }
     };
-
-  return (
-    <motion.div 
-      className="px-4 sm:px-8 md:px-16 lg:px-32 xl:px-[200px] py-8 sm:py-12 lg:py-[50px] bg-[#131616] text-white font-nunito text-sm sm:text-base"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
-      variants={containerVariants}
-    >
-        <motion.div 
-          className="flex flex-col-reverse lg:flex-row items-start lg:items-center pt-8 lg:pt-16 justify-between border-b-2 pb-8 lg:pb-14 border-[#212828] gap-6 lg:gap-0"
-          variants={itemVariants}
-        >
-            <div className="flex flex-col sm:flex-row justify-start sm:justify-center items-start sm:items-center gap-4 sm:gap-6 w-full lg:w-auto">
-                <motion.ul 
-                  className="flex flex-col sm:flex-row gap-3 sm:gap-6 order-2 sm:order-1"
-                  variants={containerVariants}
-                >
-                    {['about', 'team', 'services', 'portfolio'].map((item) => (
-                      <motion.li 
-                        key={item}
-                        className="hover:text-gray-300 cursor-pointer transition-colors"
-                        variants={navItemVariants}
-                        whileHover={{ x: 5, transition: { duration: 0.2 } }}
-                      >
-                        <Link href={`#${item}`}>{t(`nav.${item}`)}</Link>
-                      </motion.li>
-                    ))}
-                </motion.ul>
-                <motion.div variants={itemVariants}>
-                  <Link href="tel:+404012013012310" className="flex items-center gap-2 hover:text-gray-300 transition-colors">
-                      <p className="text-sm sm:text-base order-1 sm:order-2 font-medium">{t('phone')}</p>
-                  </Link>
-                </motion.div>
-            </div>
-            <motion.div 
-              className="flex justify-start lg:justify-end w-full lg:w-auto"
-              variants={itemVariants}
-              whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-            >
-                <Image src="/svg/logo.svg" alt={t('logoAlt')} width={200} height={200} className="sm:w-[200px] sm:h-[100px]" />
-            </motion.div>
-        </motion.div>
     return (
         // ВНЕШНЯЯ ОБЁРТКА НЕ АНИМИРУЕТСЯ: фон всегда непрозрачный
         <div className="px-4 sm:px-8 md:px-16 lg:px-32 xl:px-[200px] py-8 sm:py-12 lg:py-[50px] bg-[#131616] text-white font-nunito text-sm sm:text-base">
