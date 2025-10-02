@@ -8,7 +8,7 @@ const Main = () => {
     <div id="main" className="relative h-screen w-full">
         <div className="fixed inset-0 -z-10">
             <Image 
-                src="/image/hero.png" 
+                src="/image/4.jpg"
                 alt={t('heroImageAlt')}
                 fill
                 className="object-cover"

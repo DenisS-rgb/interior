@@ -67,7 +67,7 @@ const Header = () => {
               </li>
             </ul>
             <div className="flex flex-row gap-2 items-center">
-              <Link href="tel:+404012013012310" className="flex flex-row gap-2 items-center hover:text-gray-300 cursor-pointer transition-colors">
+              <Link href="tel:+47 911 97 560" className="flex flex-row gap-2 items-center hover:text-gray-300 cursor-pointer transition-colors">
                 <Image src="/svg/phone.svg" alt={t('phoneIconAlt')} width={25} height={25} />
                 <p className="hidden xl:block">{t('phone')}</p>
               </Link>
@@ -124,7 +124,7 @@ const Header = () => {
 
               {/* Phone Number */}
               <div className="flex flex-row gap-3 items-center font-nunito">
-                <Link href="tel:+404012013012310" className="flex flex-row gap-2 items-center hover:text-gray-300 cursor-pointer transition-colors">
+                <Link href="tel:+47 911 97 560" className="flex flex-row gap-2 items-center hover:text-gray-300 cursor-pointer transition-colors">
                   <Image src="/svg/phone.svg" alt={t('phoneIconAlt')} width={25} height={25} />
                   <p className="text-sm sm:text-base">{t('phone')}</p>
                 </Link>
