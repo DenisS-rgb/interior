@@ -80,7 +80,7 @@ export default function CEO() {
                             width={800}
                             height={800}
                             alt={t('imageAlt')}
-                            className="grayscale w-full h-auto max-w-md"
+                            className=" w-full h-auto max-w-md"
                             priority
                         />
                     </div>
@@ -112,7 +112,7 @@ export default function CEO() {
                             width={1000}
                             height={1000}
                             alt={t('imageAlt')}
-                            className="grayscale"
+                            className=""
                             priority
                         />
                     </div>
