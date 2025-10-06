@@ -142,7 +142,9 @@ const Footer = () => {
                     className="text-xs sm:text-sm text-gray-400 text-center lg:text-left"
                     variants={itemVariants}
                 >
-                    {t('copyright')}
+                    <Link href="https://www.quant-apps.com" target='_blank' rel='noopener noreferrer'>
+                        {t('copyright')}
+                    </Link>
                 </motion.p>
             </motion.div>
         </div>

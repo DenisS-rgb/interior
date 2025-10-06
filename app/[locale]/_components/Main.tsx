@@ -5,13 +5,13 @@ const Main = () => {
     const t = useTranslations('main');
 
     return (
-        <div id="main" className="relative h-screen w-full">
-            <div className="fixed inset-0 -z-10">
+        <div id="main" className="relative h-screen w-full ">
+            <div className="fixed inset-0 -z-10 ">
                 <Image
                     src="/image/4.jpg"
                     alt={t('heroImageAlt')}
                     fill
-                    className="object-cover"
+                    className="object-cover max-md:object-bottom-right"
                     priority
                 />
             </div>
