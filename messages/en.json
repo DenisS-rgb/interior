@@ -132,7 +132,7 @@
   "footer": {
     "nav": {
       "about": "About",
-      "team": "Team",
+      "team": "The Vision",
       "services": "Services",
       "portfolio": "Portfolio"
     },
@@ -149,7 +149,7 @@
     "brand": "INTERIOR",
     "nav": {
       "about": "About",
-      "team": "Team",
+      "team": "The Vision",
       "services": "Services",
       "portfolio": "Portfolio"
     },
@@ -178,8 +178,8 @@
       },
       {
         "id": "03",
-        "title": "Custom Furniture",
-        "description": "Furniture made to order with professional assembly included — designed to fit perfectly into your space."
+        "title": "Plug in wall System",
+        "description": "A versatile plug-in wall system, ideal for quick and flexible installations. Panels can be easily mounted without special tools, offering a modular design adaptable to any commercial, exhibition, or residential space. Ensures stability, durability, and a modern aesthetic."
       }
     ]
   },

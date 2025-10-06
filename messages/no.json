@@ -132,7 +132,7 @@
   "footer": {
     "nav": {
       "about": "Om oss",
-      "team": "Team",
+      "team": "Visjonen",
       "services": "Tjenester",
       "portfolio": "Portefølje"
     },
@@ -149,7 +149,7 @@
     "brand": "INTERIOR",
     "nav": {
       "about": "Om oss",
-      "team": "Team",
+      "team": "Visjonen",
       "services": "Tjenester",
       "portfolio": "Portefølje"
     },
@@ -178,8 +178,8 @@
       },
       {
         "id": "03",
-        "title": "Skreddersydde Møbler",
-        "description": "Møbler laget på bestilling med profesjonell montering inkludert — designet for å passe perfekt inn i ditt rom."
+        "title": "Plugg-i-vegg-system",
+        "description": "Et allsidig plug-in veggsystem, ideelt for raske og fleksible installasjoner. Panelene monteres enkelt uten spesialverktøy og gir et modulært design som kan tilpasses ethvert kommersielt, utstillings- eller boligområde. Sikrer stabilitet, holdbarhet og et moderne uttrykk."
       }
     ]
   },
