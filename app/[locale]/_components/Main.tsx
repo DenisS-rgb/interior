@@ -38,15 +38,15 @@ const Main = () => {
             {/* Desktop Layout */}
             <div className="hidden lg:grid lg:grid-cols-2">
                 <div className="flex flex-col items-start justify-start mt-[50px] xl:mt-[150px] pl-8 xl:pl-12">
-                    <h2 className="font-kanit text-3xl xl:text-[40px] text-[#6c3f00] mb-4">
+                    <h2 className="font-kanit text-3xl xl:text-[40px] text-black mb-4">
                         {t('title')}
                     </h2>
-                    <p className="font-nunito text-base text-[#a86200b9] max-w-lg">
+                    <p className="font-nunito text-base text-black max-w-lg">
                         {t('description')}
                     </p>
                 </div>
                 <div className="flex flex-col items-end justify-center h-screen mr-12 xl:mr-40 mt-20 xl:mt-40">
-                    <p className="font-kanit text-xl [writing-mode:vertical-lr] [text-orientation:down] transform rotate-180 text-white tracking-widest animate-bounce">
+                    <p className="font-kanit text-xl [writing-mode:vertical-lr] [text-orientation:down] transform rotate-180 text-black tracking-widest animate-bounce">
                         {t('swipeDown')}
                     </p>
                 </div>
