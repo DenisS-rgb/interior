@@ -11,7 +11,7 @@ const Main = () => {
                     src="/image/4.jpg"
                     alt={t('heroImageAlt')}
                     fill
-                    className="object-cover max-md:object-bottom-right"
+                    className="object-cover object-[80%_center] md:object-[45%_center]"
                     priority
                 />
             </div>
@@ -56,4 +56,4 @@ const Main = () => {
     )
 }
 
-export default Main
+export default Main;

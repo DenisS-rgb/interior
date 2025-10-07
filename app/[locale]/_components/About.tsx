@@ -36,30 +36,30 @@ const About = () => {
           .from(img, { scale: 1.06, duration: 1.1, ease: "power3.out" }, 0);
     });
 
-    const stats = root.querySelector('[data-animate="stats"]');
-    if (stats) {
+    root.querySelectorAll('[data-animate="stats"]').forEach((stats) => {
       ScrollTrigger.create({
-        trigger: stats, start: "top 75%", once: true,
+        trigger: stats,
+        start: "top 80%",
+        once: true,
         onEnter: () => {
           stats.querySelectorAll<HTMLElement>(".count").forEach((el) => {
             const end = Number(el.dataset.count || "0");
             gsap.fromTo(el, { innerText: 0 }, {
-              innerText: end, duration: 1.2, ease: "power1.out",
-              snap: { innerText: 1 }
+              innerText: end, duration: 1.2, ease: "power1.out", snap: { innerText: 1 }
             });
           });
         }
       });
-    }
+    });
 
     if (!reduced) {
       const banner = root.querySelector('[data-animate="banner"]');
-      const box   = banner?.querySelector('.banner-box') as HTMLElement | null;
+      const box = banner?.querySelector('.banner-box') as HTMLElement | null;
       const title = banner?.querySelector('[data-banner-title]') as HTMLElement | null;
-      const cta   = banner?.querySelector('[data-banner-cta]') as HTMLElement | null;
+      const cta = banner?.querySelector('[data-banner-cta]') as HTMLElement | null;
 
       if (banner && box && title && cta) {
-        gsap.set(box,   { clipPath: "inset(0 100% 0 0 round 70px)" });
+        gsap.set(box, { clipPath: "inset(0 100% 0 0 round 70px)" });
         gsap.set([title, cta], { opacity: 0, y: 20 });
 
         const tl = gsap.timeline({
@@ -79,17 +79,24 @@ const About = () => {
           ease: "power3.out"
         })
             .to(title, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, "-=0.4")
-            .to(cta,   { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, "-=0.3");
+            .to(cta, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, "-=0.3");
       }
     }
 
-    return () => ScrollTrigger.getAll().forEach(t => t.kill());
+    const refresh = () => ScrollTrigger.refresh();
+    window.addEventListener('load', refresh);
+    window.addEventListener('resize', refresh);
+
+    return () => {
+      window.removeEventListener('load', refresh);
+      window.removeEventListener('resize', refresh);
+      ScrollTrigger.getAll().forEach(t => t.kill());
+    };
   }, []);
 
   return (
       <div id="about" ref={rootRef} className="bg-[#1A1D1D] px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-[300px] pt-8 sm:pt-12 md:pt-16 lg:pt-20 xl:pt-[100px]">
         <div className="max-w-7xl mx-auto">
-          {/* Header Section */}
           <div className="mb-6 sm:mb-8 lg:mb-12 flex flex-col gap-2 sm:gap-3 lg:gap-6">
             <h2 data-animate="eyebrow" className="text-[#6D7D7D] font-kanit tracking-[0.2em] sm:tracking-[0.3em] text-xs font-light uppercase">
               {t('header')}
@@ -105,7 +112,6 @@ const About = () => {
             </div>
           </div>
 
-          {/* Images and Stats Grid - Mobile/Tablet */}
           <div className="block xl:hidden space-y-4 sm:space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               <div className="sm:col-span-2 reveal">
@@ -122,8 +128,7 @@ const About = () => {
               </div>
             </div>
 
-            {/* Stats */}
-            <div className="flex justify-center font-kanit py-6 sm:py-8">
+            <div className="flex justify-center font-kanit py-6 sm:py-8" data-animate="stats">
               <div className="flex space-x-8 sm:space-x-12 md:space-x-16">
                 <div className="text-center">
                   <h3 className="text-[#6D7D7D] text-2xl sm:text-3xl md:text-4xl font-light">
@@ -145,7 +150,6 @@ const About = () => {
             </div>
           </div>
 
-          {/* Desktop Layout */}
           <div className="hidden xl:grid xl:grid-cols-6 gap-4 2xl:gap-6">
             <div className="col-span-2 h-full reveal">
               <Image src="/image/about1.png" alt={t('images.project1')} width={400} height={400}
@@ -183,7 +187,6 @@ const About = () => {
             </div>
           </div>
 
-          {/* Bottom Banner */}
           <div className="relative translate-y-1/2" data-animate="banner">
             <div className="banner-box relative overflow-hidden rounded-[70px]">
               <Image src="/image/about4.png" alt={t('images.bottomBackground')} width={1920} height={200}
