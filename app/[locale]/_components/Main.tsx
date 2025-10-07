@@ -23,7 +23,7 @@ const Main = () => {
                         <h2 className="font-kanit text-2xl sm:text-3xl md:text-4xl text-white mb-4 pt-32">
                             {t('title')}
                         </h2>
-                        <p className="font-nunito text-sm sm:text-base text-white/70 max-w-md">
+                        <p className="font-nunito text-sm sm:text-base text-white/70 max-w-md font-bold">
                             {t('description')}
                         </p>
                     </div>
