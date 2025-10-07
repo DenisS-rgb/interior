@@ -5,7 +5,7 @@ const Main = () => {
     const t = useTranslations('main');
 
     return (
-        <div id="main" className="relative h-screen w-full ">
+        <div id="main" className="relative min-h-[100svh] w-full ">
             <div className="fixed inset-0 -z-10 ">
                 <Image
                     src="/image/4.jpg"
